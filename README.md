@@ -21,13 +21,16 @@ First, run `npm install` to install the dependencies.
 
 Then, call the script.
 ```bash
+# Make the script executable
+chmod +x cronlog
+# Launch the script
 /path/to/cronlog <jobname> /path/to/command [options...] 
 ```
 
 To use the script from CRON, I create a link in /etc/bin that points towards my cronlog script. So, I can add a cron line like the following.
 
 ```bash
-* * * * * cronlog my_job_name echo "MY SCRIPT WORKS WELL!"
+* * * * * cronlog my_job_name echo "MY SCRIPT WORKS WELL"
 ```
 
 The last result of each job will be stored in a SQLite file at ~/.cronlog/cronlog.sqlite
