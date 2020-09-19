@@ -34,4 +34,4 @@ The last result of each job will be stored in a SQLite file at ~/.cronlog/cronlo
 
 |name       |cmd                 |started                 |completed               |duration  |output                   |status    
 |---------- |--------------------|------------------------|------------------------|----------|-------------------------|----------
-|failure    |tests/failure.sh 123|2020-09-19T15:30:02.542Z|2020-09-19T15:30:02.548Z|0.006     |This script failed.      |1
+|my_job_name|echo MY SCRIPT WORKS WELL|2020-09-19T15:48:26.313Z|2020-09-19T15:48:26.319Z|0.006|MY SCRIPT WORKS WELL     |0
