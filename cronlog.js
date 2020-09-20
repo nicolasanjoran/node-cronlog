@@ -84,10 +84,11 @@ let transporter = nodemailer.createTransport({
 transporter.sendMail({
     from: `CRON Monitor 🚨<${process.env.GMAIL_USER}>`,
     to: process.env.MAIL_TO,
-    subject: `Script: ${jobName}`,
+    subject: `Script: ${jobName} @${os.hostname()}`,
     text:
         `${result.status == 0 ? "✅ Issue resolved" : ("❌ ERROR " + result.status)}
 JOB: ${jobName}
+HOST: ${os.hostname()}
 CMD: ${jobCmd}
 STARTED: ${startDate.toISOString()}
 COMPLETED: ${completedDate.toISOString()}
