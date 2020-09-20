@@ -27,7 +27,7 @@ chmod +x cronlog
 /path/to/cronlog <jobname> /path/to/command [options...] 
 ```
 
-To use the script from CRON, I create a link in /etc/bin that points towards my cronlog script. So, I can add a cron line like the following.
+To use the script from CRON, I create a link in /usr/bin that points towards my cronlog script. So, I can add a cron line like the following.
 
 ```bash
 * * * * * cronlog my_job_name echo "MY SCRIPT WORKS WELL"
