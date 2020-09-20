@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+const os = require('os')
 const fs = require('fs')
 const exec = require('child_process').execSync
 const CRONLOG_PATH = `${process.env.HOME}/.cronlog/`
