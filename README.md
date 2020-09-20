@@ -28,6 +28,9 @@ chmod +x cronlog
 ```
 
 To use the script from CRON, I create a link in /usr/bin that points towards my cronlog script. So, I can add a cron line like the following.
+Please note that you might need to ensure the /usr/bin/node binary corresponds to the node binary used to run `npm install`.
+
+*OPTIONAL: Run `sudo ln -s $(which node) /usr/bin/node` if you want to create a link to the current node executable.*
 
 ```bash
 * * * * * cronlog my_job_name echo "MY SCRIPT WORKS WELL"
